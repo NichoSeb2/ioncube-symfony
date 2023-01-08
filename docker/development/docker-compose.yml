@@ -1,0 +1,9 @@
+version: '3'
+services:
+  lamp:
+    build: ./
+    ports:
+      - 8080:80
+    volumes:
+      - ./php.ini:/usr/local/etc/php/conf.d/more_upload_size.ini
+      - ../../:/var/www/html
